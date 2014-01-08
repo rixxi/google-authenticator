@@ -1,0 +1,18 @@
+{
+    "name": "rixxi/google-authenticator",
+    "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+    "authors": [
+        {
+            "name": "Michal Gebauer",
+            "homepage": "http://mishak.net"
+        }
+    ],
+    "support": {
+        "email": "mishak+rixxi@mishak.net",
+        "issues": "https://github.com/rixxi/google-authenticator"
+    },
+    "require": {
+        "christian-riesen/base32": "1.1",
+        "nette/nette": "2.0|2.1"
+    }
+}
