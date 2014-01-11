@@ -28,9 +28,6 @@ class Seed
 	 */
 	public function __construct($value)
 	{
-		if (strlen($value) !== 8) {
-			throw new \Exception('Seed value must be 8 characters long.');
-		}
 		$this->value = $value;
 	}
 
