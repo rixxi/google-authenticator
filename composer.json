@@ -14,5 +14,10 @@
     "require": {
         "christian-riesen/base32": "1.1",
         "nette/nette": "2.0|2.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "Rixxi\\GoogleAuthenticator\\": "src/"
+        }
     }
 }
