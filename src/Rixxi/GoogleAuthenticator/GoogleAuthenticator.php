@@ -55,7 +55,7 @@ class GoogleAuthenticator
 			throw new \Exception('Timestamp must be integer or instance of ITimestampProvider.');
 		}
 
-		if ((is_int($timestamp) || ctype_digit($timestamp)) && $period > 0) {
+		if ((is_int($period) || ctype_digit($period)) && $period > 0) {
 			$this->period = (int) $period;
 
 		} else {
