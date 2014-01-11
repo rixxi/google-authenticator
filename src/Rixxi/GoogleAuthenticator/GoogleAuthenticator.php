@@ -61,8 +61,6 @@ class GoogleAuthenticator
 		} else {
 			throw new \Exception('Period must be integer greater then 0.');
 		}
-
-		$this->timestampProvider = $timestamp instanceof ITimestampProvider ? $timestamp : new ConstantTimestampProvider((int) $timestamp);
 	}
 
 
