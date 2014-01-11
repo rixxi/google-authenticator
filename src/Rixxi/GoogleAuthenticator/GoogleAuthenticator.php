@@ -8,7 +8,9 @@ use Base32\Base32;
 class GoogleAuthenticator
 {
 
-	const DIGITS = 6;
+	const
+		DIGITS = 6,
+		POW_10_DIGITS = 1000000;
 
 
 	/** @var Seed */
@@ -133,10 +135,12 @@ class GoogleAuthenticator
 	{
 		$offset = ord($hash[19]) & 0xf;
 
-		return
+		return (
+			(ord($hash[$offset    ]) & 0x7f) << 24 |
 			(ord($hash[$offset + 1]) & 0xff) << 16 |
 			(ord($hash[$offset + 2]) & 0xff) <<  8 |
-			 ord($hash[$offset + 3]) & 0xff;
+			ord($hash[$offset + 3]) & 0xff
+		) % self::POW_10_DIGITS;
 	}
 
 }
